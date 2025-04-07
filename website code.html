@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Platform</title>
+    <style>
+        body {
+            font-family: 'Source Serif Pro', serif;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.8);
+            background-color: #fff;
+        }
+        .nav {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .post {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+        .post-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .post-meta {
+            color: #757575;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .post-content {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .write-btn {
+            background-color: #1a8917;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 99em;
+            text-decoration: none;
+        }
+        .upload-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            text-align: center;
+        }
+        #file-upload {
+            display: none;
+        }
+        .upload-label {
+            background-color: #1a8917;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 99em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1>My Blog Platform</h1>
+        <a href="#" class="write-btn">Write a Story</a>
+    </nav>
+
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Your Blog Post</h2>
+            <p>Share your story with the world</p>
+            <input type="file" id="file-upload" accept=".txt,.md,.doc,.docx">
+            <label for="file-upload" class="upload-label">Choose File</label>
+        </div>
+
+        <!-- Sample Blog Posts -->
+        <div class="post">
+            <h2 class="post-title">Sample Blog Post Title</h2>
+            <div class="post-meta">
+                <span>John Doe</span> · 
+                <span>Oct 15, 2023</span>
+            </div>
+            <div class="post-content">
+                <p>This is a sample blog post content. Your uploaded content will appear in a similar format.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <h2 class="post-title">Another Blog Post</h2>
+            <div class="post-meta">
+                <span>Jane Smith</span> · 
+                <span>Oct 14, 2023</span>
+            </div>
+            <div class="post-content">
+                <p>Here's another sample blog post to demonstrate the layout.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Here you would typically handle the file upload to your server
+                alert('File selected: ' + file.name + '\nIn a real application, this would be uploaded to a server.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
